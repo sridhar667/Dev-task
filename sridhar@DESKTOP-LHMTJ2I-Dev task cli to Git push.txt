@@ -1,0 +1,103 @@
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.146.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+/home/sridhar/.hushlogin file.
+sridhar@DESKTOP-LHMTJ2I:~$ git clone https://github.com/sridhar667/Dev-task.git
+Cloning into 'Dev-task'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (11/11), done.
+sridhar@DESKTOP-LHMTJ2I:~$ ls
+Dev-task  DevFolder  Devops--test  file.txt
+sridhar@DESKTOP-LHMTJ2I:~$ cd Dev-task
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+example.txt  file  sample.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ rm -rf *
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ touch {1..5}example.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+1example.txt  2example.txt  3example.txt  4example.txt  5example.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ touch script{1..5}.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+1example.txt  3example.txt  5example.txt  script2.txt  script4.txt
+2example.txt  4example.txt  script1.txt   script3.txt  script5.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ git add .
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+1example.txt  3example.txt  5example.txt  script2.txt  script4.txt
+2example.txt  4example.txt  script1.txt   script3.txt  script5.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1example.txt
+        new file:   2example.txt
+        new file:   3example.txt
+        new file:   4example.txt
+        new file:   5example.txt
+        deleted:    example.txt
+        deleted:    file/file.txt
+        deleted:    sample.txt
+        new file:   script1.txt
+        new file:   script2.txt
+        new file:   script3.txt
+        new file:   script4.txt
+        new file:   script5.txt
+
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ git commit -m "added script and local files"
+[main 0c2a6eb] added script and local files
+ 13 files changed, 3 deletions(-)
+ create mode 100644 1example.txt
+ create mode 100644 2example.txt
+ create mode 100644 3example.txt
+ create mode 100644 4example.txt
+ create mode 100644 5example.txt
+ delete mode 100644 example.txt
+ delete mode 100644 file/file.txt
+ delete mode 100644 sample.txt
+ create mode 100644 script1.txt
+ create mode 100644 script2.txt
+ create mode 100644 script3.txt
+ create mode 100644 script4.txt
+ create mode 100644 script5.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+1example.txt  3example.txt  5example.txt  script2.txt  script4.txt
+2example.txt  4example.txt  script1.txt   script3.txt  script5.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ git push origin main
+Username for 'https://github.com': S SRIDHAR
+Password for 'https://S SRIDHAR@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/sridhar667/Dev-task.git/'
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ git push origin main
+Username for 'https://github.com': sridhar667
+Password for 'https://sridhar667@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sridhar667/Dev-task.git
+   83302b3..0c2a6eb  main -> main
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$ ls
+1example.txt  3example.txt  5example.txt  script2.txt  script4.txt
+2example.txt  4example.txt  script1.txt   script3.txt  script5.txt
+sridhar@DESKTOP-LHMTJ2I:~/Dev-task$
