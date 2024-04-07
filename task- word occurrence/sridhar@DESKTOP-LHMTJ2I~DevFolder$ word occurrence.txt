@@ -1,0 +1,30 @@
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder$ vi word.txt
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder$ cat word.txt
+1. Please give me a moment to respond.
+2. Can you give me some advice on this matter?
+3. I'll give it my best shot.
+4. They refused to give us any information.
+5. Welcome to our give and take community forum!
+6. Give it another try; you might succeed.
+7. We should give back to those in need.
+8. I give you my word, I won't let you down.
+9. Give yourself some time to relax,give a break.
+10. Give thanks for all the blessings you have.
+
+
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder$ sed -i '/Welcome/,$s/give/Learning/g' word.txt
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder$ cat word.txt
+1. Please give me a moment to respond.
+2. Can you give me some advice on this matter?
+3. I'll give it my best shot.
+4. They refused to give us any information.
+5. Welcome to our Learning and take community forum!
+6. Give it another try; you might succeed.
+7. We should Learning back to those in need.
+8. I Learning you my word, I won't let you down.
+9. Give yourself some time to relax,Learning a break.
+10. Give thanks for all the blessings you have.
+
+
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder$
+
