@@ -1,0 +1,47 @@
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ curl --head https://www.guvi.in
+HTTP/2 200
+date: Sun, 07 Apr 2024 09:52:31 GMT
+content-type: text/html
+x-frame-options: SAMEORIGIN
+last-modified: Fri, 05 Apr 2024 16:26:54 GMT
+vary: Accept-Encoding
+cache-control: public
+cf-cache-status: DYNAMIC
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Ax0hiWr6e8KXYvHbnuP0w1LY76qerTYktjrKMCmKMj5lbugwqZK0ciKg9EhSCeHklDnWUN0dNZxkoDApJl%2BclG69oW%2FleU%2FHDx8dxJMMvkboehmLqKwq8lbbXQhb"}],"group":"cf-nel","max_age":604800}
+nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+strict-transport-security: max-age=0; preload
+server: cloudflare
+cf-ray: 87092015c93a93b0-BBI
+alt-svc: h3=":443"; ma=86400
+
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ vi website.sh
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ cat website.sh
+url="https://www.guvi.in/"
+Status="$(curl  --silent --head $url | grep "HTTP/" | awk '{print $2}')"
+echo "$Status"
+if [ "$Status" == "200" ] ;
+then
+echo "Success"
+elif [ "$Status" != "200" ] ;
+then
+echo "Failure"
+fi
+
+
+
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ chmod +x website.sh
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ ls -lart
+total 32
+-rwxr-xr-x 1 sridhar sridhar   99 Apr  6 09:15 testscript.sh
+drwxr-xr-x 2 sridhar sridhar 4096 Apr  6 09:15 test
+-rw-r--r-- 1 sridhar sridhar    0 Apr  6 09:16 sample.txt
+-rwxr-xr-x 1 sridhar sridhar  166 Apr  7 09:16 condition.sh
+-rwxr-xr-x 1 sridhar sridhar  333 Apr  7 10:20 condition1.sh
+-rw-r--r-- 1 sridhar sridhar  133 Apr  7 12:26 1
+drwxr-xr-x 5 sridhar sridhar 4096 Apr  7 15:15 ..
+-rwxr-xr-x 1 sridhar sridhar  219 Apr  7 15:23 website.sh
+drwxr-xr-x 3 sridhar sridhar 4096 Apr  7 15:23 .
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ ./website.sh
+200
+Success
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$
