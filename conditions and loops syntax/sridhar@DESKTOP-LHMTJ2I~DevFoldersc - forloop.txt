@@ -1,0 +1,21 @@
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ vi forloop.sh
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ cat forloop.sh
+for i in $(seq 1 10);
+do
+  echo "$i"
+done
+
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ chmod +x forloop.sh
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$ ./forloop.sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+sridhar@DESKTOP-LHMTJ2I:~/DevFolder/script-Dev$
+
