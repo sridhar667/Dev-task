@@ -1,0 +1,6 @@
+S3 bucket creation file
+
+echo "Welcome S3 bucket has been created successfully."
+
+
+
